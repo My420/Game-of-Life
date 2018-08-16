@@ -1,18 +1,31 @@
-
- export default class GameView {
+export default class GameView {
   constructor() {
     this.cell = document.createElement(`div`);
-    this.cell.className = `field__cell`;
+    this.gameField = document.querySelector(`.field`);
   }
 
-  render(size) {
-    const gameField = document.querySelector(`.field`);
-    const fragment = document.createDocumentFragment();
-    for (let i = 0; i < size * size; i++ ) {
-      fragment.appendChild(this.cell.cloneNode(true));
+  createCell(row, col, isAlive) {
+    let newCell = this.cell.cloneNode(true);
+    newCell.setAttribute(`data-row`, `${row}`);
+    newCell.setAttribute(`data-col`, `${col}`);
+    if (isAlive) {
+      newCell.className = `field__cell field__cell--alive`;
+    } else {
+      newCell.className = `field__cell`;
     }
-    gameField.appendChild(fragment);
+    return newCell;
+  }
+
+  render(grid) {
+    //const gameField = document.querySelector(`.field`);    // вынести в свойства?
+    this.gameField.innerHTML = ``;
+    const fragment = document.createDocumentFragment();
+
+    for(let r = 0; r < grid.length; r++ ){
+      for(let c = 0; c < grid.length; c++ ){
+          fragment.appendChild(this.createCell(r, c, grid[r][c]._alive));
+      };
+    };
+    this.gameField.appendChild(fragment);
   }
 };
-
-

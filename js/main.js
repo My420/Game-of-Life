@@ -1,13 +1,14 @@
-import Game from './data/game.js';
+import game from './data/data.js';
 import GameView from './view/game-view.js';
+import GameController from './controller/game-controller.js';
 
-const size = 20;
 
-const game = new Game(size);
-const view = new GameView;
+const view = new GameView();
+const controller = new GameController();
+view.render(game.grid.cells);
+controller.init();
 
-view.render(size);
+/*setInterval(() => {
+   game.nextStep();
 
-console.log(game.grid.cells);
-
-export default game;
+}, 5000);*/
