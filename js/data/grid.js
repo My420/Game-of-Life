@@ -32,7 +32,17 @@ export default class Grid {
   */
 
   _isNeigborAlive(row, col) {
-    if(!this.cells[row] || !this.cells[col]) { return false};
+    if (row === -1) {
+      row = 19;
+    } else if (row === 20) {
+      row = 0;
+    };
+
+    if (col === -1) {
+      col = 19;
+    } else if (col === 20) {
+      col = 0;
+    };
     return this.cells[row][col].isAlive;
   }
 
