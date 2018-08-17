@@ -1,4 +1,4 @@
-export default class GameView {
+ class GameView {
   constructor() {
     this.cell = document.createElement(`div`);
     this.gameField = document.querySelector(`.field`);
@@ -29,3 +29,7 @@ export default class GameView {
     this.gameField.appendChild(fragment);
   }
 };
+
+const view = new GameView();
+
+export default view;

@@ -1,5 +1,5 @@
 import Grid from './grid.js';
-import GameView from '../view/game-view.js';
+import view from '../view/game-view.js';
 
 export default class Game {
   constructor(gridSize, random) {
@@ -8,16 +8,22 @@ export default class Game {
 
   oneStep() {
     this.grid.mutate();
-    const view = new GameView();
-    view.render(this.grid.cells);
+    this.changeView();
   }
 
   play() {
   setInterval(() => {
     this.grid.mutate();
-    const view = new GameView();
-    view.render(this.grid.cells);
+    this.changeView();
     }, 400);
   }
 
+  changeCellStatus(row, col) {
+    this.grid.changeCell(row, col);
+    this.changeView();
+  }
+
+  changeView() {
+    view.render(this.grid.cells);
+  }
 };

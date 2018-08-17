@@ -45,9 +45,9 @@ export default class Grid {
     if (this._isNeigborAlive(row-1, col+1)) { neighbor++}; //3
     if (this._isNeigborAlive(row, col-1)) { neighbor++};   //4
     if (this._isNeigborAlive(row, col+1)) { neighbor++};   //5
-    if (this._isNeigborAlive(row-1, col-1)) { neighbor++}; //6
-    if (this._isNeigborAlive(row-1, col-1)) { neighbor++};   //7
-    if (this._isNeigborAlive(row-1, col-1)) { neighbor++}; //8
+    if (this._isNeigborAlive(row+1, col-1)) { neighbor++}; //6
+    if (this._isNeigborAlive(row+1, col)) { neighbor++};   //7
+    if (this._isNeigborAlive(row+1, col+1)) { neighbor++}; //8
 
     return neighbor;
   }
@@ -79,5 +79,14 @@ export default class Grid {
       };
     };
     this.cells = newGrid.cells;
+  }
+
+  changeCell(row, col) {
+    const cell = this.cells[row][col];
+    if(cell.isAlive) {
+      cell.die();
+    } else {
+      cell.live();
+    }
   }
 };
