@@ -4,7 +4,7 @@
   width: 280px;
   height: 280px;
   margin: 0 auto;
-  border: 4px solid #edcf76;
+  border: 3px solid #82847b;
 }
 
 .field__cell {
@@ -13,9 +13,9 @@
   width: 14px;
   height: 14px;
   box-sizing: border-box;
-  border: 1px solid #edcf76;
+  border: 1px solid #82847b;
 }
 
 .field__cell--alive {
- background-color: green;
+ background-color: #35e635;
 }
