@@ -26,11 +26,6 @@ export default class Grid {
     };
   }
 
-  /*  1 2 3
-      4 c 5
-      6 7 8
-  */
-
   _isNeigborAlive(row, col) {
     if (row === -1) {
       row = 19;
@@ -50,9 +45,9 @@ export default class Grid {
     const row = cell.row;
     const col = cell.col;
     let neighbor = 0;
-    if (this._isNeigborAlive(row-1, col-1)) { neighbor++}; //1
-    if (this._isNeigborAlive(row-1, col)) { neighbor++};   //2
-    if (this._isNeigborAlive(row-1, col+1)) { neighbor++}; //3
+    if (this._isNeigborAlive(row-1, col-1)) { neighbor++}; //1    1 2 3
+    if (this._isNeigborAlive(row-1, col)) { neighbor++};   //2    4 c 5
+    if (this._isNeigborAlive(row-1, col+1)) { neighbor++}; //3    6 7 8
     if (this._isNeigborAlive(row, col-1)) { neighbor++};   //4
     if (this._isNeigborAlive(row, col+1)) { neighbor++};   //5
     if (this._isNeigborAlive(row+1, col-1)) { neighbor++}; //6

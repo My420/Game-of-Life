@@ -2,6 +2,7 @@
   constructor() {
     this.cell = document.createElement(`div`);
     this.gameField = document.querySelector(`.field`);
+    this.speedField = document.querySelector(`.controls__output`);
   }
 
   createCell(row, col, isAlive) {
@@ -14,6 +15,10 @@
       newCell.className = `field__cell`;
     }
     return newCell;
+  }
+
+  changeSpeed(speed) {
+    this.speedField.innerHTML = `${speed}ms`;
   }
 
   render(grid) {
