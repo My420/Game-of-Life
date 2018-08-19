@@ -28,14 +28,14 @@ export default class Grid {
 
   _isNeigborAlive(row, col) {
     if (row === -1) {
-      row = 19;
-    } else if (row === 20) {
+      row = this.size - 1;
+    } else if (row === this.size) {
       row = 0;
-    };
+    }
 
     if (col === -1) {
-      col = 19;
-    } else if (col === 20) {
+      col = this.size - 1;
+    } else if (col === this.size) {
       col = 0;
     };
     return this.cells[row][col].isAlive;

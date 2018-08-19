@@ -1,7 +1,28 @@
 import Game from './game.js';
 
-const size = 20;
-const speed = 400;
-const game = new Game(size, speed, true);
+class Settings {
+  constructor() {
+    this.field = document.querySelector(`.page_main`);
+    this.size = 20;
+    this.speed = 400;
+    this.random = true;
+  }
+
+  calcSize() {
+    let width = getComputedStyle(this.field).width;
+    width = +width.slice(0, 3);
+    if (width < 640) {
+      this.size = 20;
+    } else if (width < 920) {
+      this.size = 32;
+    } else {
+      this.size = 40;
+    };
+  }
+}
+
+const setting = new Settings();
+setting.calcSize();
+const game = new Game(setting.size, setting.speed, setting.random);
 
 export default game;
