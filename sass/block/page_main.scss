@@ -1,0 +1,13 @@
+@media (min-width: $tablet) {
+  .page_main {
+    display: flex;
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $pc) {
+  .page_main {
+    width: 920px;
+  }
+}

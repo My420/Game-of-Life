@@ -38,3 +38,17 @@
   background-position-x: 7px;
   background-repeat: no-repeat;
 }
+
+@media (min-width: $pc) {
+ .contacts {
+    position: absolute;
+    flex-direction: column;
+    width: auto;
+    top: -400px;
+    left: 650px;
+  }
+
+  .contacts__item {
+    margin: 10px 0px;
+  }
+}

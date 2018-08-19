@@ -19,3 +19,20 @@
 .field__cell--alive {
  background-color: $life;
 }
+
+@media (min-width: $tablet) {
+  .field {
+   width: 448px;
+   height: 448px;
+   margin: 0;
+   order: 2;
+  }
+
+}
+
+@media (min-width: $pc) {
+  .field {
+   width: 560px;
+   height: 560px;
+  }
+}

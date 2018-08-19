@@ -48,3 +48,28 @@
   align-items: center;
   width: 280px;
 }
+
+@media (min-width: $tablet) {
+  .controls {
+    flex-direction: column;
+    width: auto;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 22px;
+    padding-right: 22px;
+    order: 1;
+  }
+
+  .controls__wrapper {
+   flex-direction: column;
+   width: auto;
+   align-items: center;
+  }
+}
+
+@media (min-width: $pc) {
+  .controls {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
