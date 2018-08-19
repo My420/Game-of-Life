@@ -15,7 +15,7 @@ body {
   color: #08457E;
 }
 
-input, textarea {
+input, textarea, output {
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -24,10 +24,6 @@ input, textarea {
   color: #283645;
 }
 
-/*.container {
-  width: 87.5%;
-  margin: 0 auto;
-}*/
 
 @media (min-width: $tablet) {
   .container {

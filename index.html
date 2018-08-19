@@ -17,37 +17,37 @@
   <header class="page_header">
     <h1 class="page_header__title">Game of Life</h1>
     <p class="page_header__rules">
-      <a class="page_header__link" href="https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB">Об игре</a>
+      <a class="page_header__link" href="https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB"><span class="visually-hidden ">Об игре</span></a>
     </p>
   </header>
 
   <main class="page_main">
     <section class="page_main__game field">
-      <h2 class="visually-hidden">Поле игры</h2>
     </section>
     <section class="page_main__controls controls">
-      <h2 class="visually-hidden">Управление игрой</h2>
       <button class="controls__button controls__button--play">Start</button>
-      <button class="controls__button controls__button--stop">Pause</button>
       <button class="controls__button controls__button--nextStep">One Step</button>
+      <button class="controls__button controls__button--stop">Pause</button>
       <button class="controls__button controls__button--clear">Reset</button>
       <button class="controls__button controls__button--random">Random</button>
-      <button class="controls__button controls__button--speedUp" disabled>Up</button>
-      <output class="controls__output">400ms</output>
-      <button class="controls__button controls__button--speedDown" disabled>Down</button>
+      <div class="controls__wrapper">
+        <button class="controls__button controls__button--speedUp" disabled>Up</button>
+        <output class="controls__output">400ms</output>
+        <button class="controls__button controls__button--speedDown" disabled>Down</button>
+      </div>
     </section>
   </main>
 
   <footer class="page_footer">
     <ul class="page_footer__contacts contacts">
       <li class="contacts__item">
-        <a class="contacts__portfolio" href="#"><span class="visually-hidden">Портфолио</span></a>
+        <a class="contacts__link contacts__link--github" href="#"><span class="visually-hidden">Github</span></a>
       </li>
       <li class="contacts__item">
-        <a class="contacts__mail" href="#"><span class="visually-hidden">Почта</span></a>
+        <a class="contacts__link contacts__link--mail" href="#"><span class="visually-hidden">Почта</span></a>
       </li>
       <li class="contacts__item">
-        <a class="contacts__skype" href="#"><span class="visually-hidden">Skype</span></a>
+        <a class="contacts__link contacts__link--skype" href="#"><span class="visually-hidden">Skype</span></a>
       </li>
     </ul>
   </footer>

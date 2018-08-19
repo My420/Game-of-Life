@@ -1,0 +1,24 @@
+.page_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.page_header__title {
+    color: $life;
+}
+
+.page_header__link {
+  display: block;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+   border-radius: 50%;
+  border: 2px solid $links;
+  background-image: url("../img/wiki-icon.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position-y: 7px;
+  background-position-x: center;
+}

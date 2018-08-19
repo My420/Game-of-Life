@@ -1,0 +1,50 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 280px;
+  padding: 20px 20px;
+  margin: 0 auto;
+}
+
+.controls__button {
+  display: block;
+  margin: 10px 0px;
+  box-sizing: border-box;
+  width: 120px;
+  height: 40px;
+  background-color: #d231b5;
+  border: 2px solid $life;
+  border-radius: 20px 20px;
+  color: $life;
+}
+
+.controls__button:disabled {
+  opacity: 0.2;
+}
+
+.controls__output {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  margin: 0;
+  padding-top: 4px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #146186;
+  border: none;
+  border-radius: 20px 20px;
+  color: $life;
+}
+
+.controls__button--speedUp,
+.controls__button--speedDown {
+  width: 60px;
+}
+
+.controls__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 280px;
+}

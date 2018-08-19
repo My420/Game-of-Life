@@ -1,0 +1,29 @@
+.controls__button:hover {
+  box-shadow: 0 0 20px $life;
+}
+
+.controls__button:disabled:hover {
+  box-shadow: none;
+}
+
+.controls__button:active {
+  opacity: 0.4;
+}
+
+.contacts__link:hover,
+.page_header__link:hover {
+  box-shadow: 0 0 20px $links;
+}
+
+.contacts__link:active,
+.page_header__link:active {
+  opacity: 0.4;
+}
+
+.field__cell:hover {
+  border-color: $life;
+}
+
+.field__cell--alive:hover {
+  border-color: red;
+}
