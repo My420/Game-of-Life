@@ -25,15 +25,15 @@
     <section class="page_main__game field">
     </section>
     <section class="page_main__controls controls">
-      <button class="controls__button controls__button--play">Start</button>
-      <button class="controls__button controls__button--nextStep">One Step</button>
-      <button class="controls__button controls__button--stop">Pause</button>
-      <button class="controls__button controls__button--clear">Reset</button>
-      <button class="controls__button controls__button--random">Random</button>
+      <button class="controls__button" data-action="start">Start</button>
+      <button class="controls__button" data-action="oneStep">One Step</button>
+      <button class="controls__button" data-action="pause">Pause</button>
+      <button class="controls__button" data-action="reset">Reset</button>
+      <button class="controls__button" data-action="random">Random</button>
       <div class="controls__wrapper">
-        <button class="controls__button controls__button--speedUp" disabled>Up</button>
+        <button class="controls__button controls__button--speedUp"  data-action="speedUp" disabled>Up</button>
         <output class="controls__output">400ms</output>
-        <button class="controls__button controls__button--speedDown" disabled>Down</button>
+        <button class="controls__button controls__button--speedDown"  data-action="speedDown" disabled>Down</button>
       </div>
     </section>
   </main>
