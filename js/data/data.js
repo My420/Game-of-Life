@@ -2,14 +2,14 @@ import Game from './game.js';
 
 class Settings {
   constructor() {
-    this.field = document.querySelector(`.page_main`);
+    this._field = document.querySelector(`.page_main`);
     this.size = 20;
     this.speed = 400;
     this.random = true;
   }
 
   calcSize() {
-    let width = getComputedStyle(this.field).width;
+    let width = getComputedStyle(this._field).width;
     width = +width.slice(0, 3);
     if (width < 640) {
       this.size = 20;
@@ -17,7 +17,7 @@ class Settings {
       this.size = 32;
     } else {
       this.size = 40;
-    };
+    }
   }
 }
 

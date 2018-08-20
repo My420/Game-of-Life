@@ -10,20 +10,20 @@ export default class Grid {
   create(random = false) {
     this.cells = new Array(this.size);
 
-    for(let r = 0; r < this.size; r++ ){
+    for (let r = 0; r < this.size; r++ ) {
       this.cells[r] = new Array(this.size);
-      for(let c = 0; c < this.size; c++ ){
-        if(random) {
-          if(Math.random() < 0.4) {
-          this.cells[r][c] = new Cell(r, c, true);
+      for (let c = 0; c < this.size; c++ ) {
+        if (random) {
+          if (Math.random() < 0.4) {
+            this.cells[r][c] = new Cell(r, c, true);
           } else {
-          this.cells[r][c] = new Cell(r, c, false);
+            this.cells[r][c] = new Cell(r, c, false);
           }
         } else {
           this.cells[r][c] = new Cell(r, c, false);
-        };
-      };
-    };
+        }
+      }
+    }
   }
 
   _isNeigborAlive(row, col) {
@@ -37,7 +37,7 @@ export default class Grid {
       col = this.size - 1;
     } else if (col === this.size) {
       col = 0;
-    };
+    }
     return this.cells[row][col].isAlive;
   }
 
@@ -60,38 +60,38 @@ export default class Grid {
   mutate() {
     let newGrid = new Grid(this.size);
 
-    for(let r = 0; r < this.size; r++ ){
-      for(let c = 0; c < this.size; c++ ){
+    for (let r = 0; r < this.size; r++ ) {
+      for (let c = 0; c < this.size; c++ ) {
         let cell = this.cells[r][c];
         let newCell = newGrid.cells[r][c];
         let neighbor = this._countNeighbor(cell);
 
-        if(cell.isAlive) {
-          if (neighbor < 2){
+        if (cell.isAlive) {
+          if (neighbor < 2) {
             newCell.die();
           } else if (neighbor > 3) {
             newCell.die();
           } else {
             newCell.live();
-          };
+          }
         } else {
-          if (neighbor === 3){
+          if (neighbor === 3) {
             newCell.live();
           } else {
             newCell.die();
-          };
-        };
-      };
-    };
+          }
+        }
+      }
+    }
     this.cells = newGrid.cells;
   }
 
   changeCell(row, col) {
     const cell = this.cells[row][col];
-    if(cell.isAlive) {
+    if (cell.isAlive) {
       cell.die();
     } else {
       cell.live();
     }
   }
-};
+}

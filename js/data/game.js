@@ -16,9 +16,9 @@ export default class Game {
   }
 
   play() {
-  this._timerId = setInterval(() => {
-    this.grid.mutate();
-    this.changeView();
+    this._timerId = setInterval(() => {
+      this.grid.mutate();
+      this.changeView();
     }, this._currentSpeed);
   }
 
@@ -52,29 +52,29 @@ export default class Game {
   }
 
   _speedUp() {
-    if(this._currentSpeed != 100) {
+    if (this._currentSpeed !== 100) {
       this._currentSpeed -= 100;
-    };
+    }
   }
 
   _speedDown() {
-    if(this._currentSpeed != 1000) {
+    if (this._currentSpeed !== 1000) {
       this._currentSpeed += 100;
-    };
+    }
   }
 
   changeSpeed(direction) {
-      this.stop()
-      if(direction === `up`) {
-        this._speedUp();
-      } else if(direction === `down`) {
-        this._speedDown();
-      };
-      view.changeSpeed(this._currentSpeed);
-      this.play();
+    this.stop();
+    if (direction === `up`) {
+      this._speedUp();
+    } else if (direction === `down`) {
+      this._speedDown();
+    }
+    view.changeSpeed(this._currentSpeed);
+    this.play();
   }
 
   changeView() {
     view.render(this.grid.cells);
   }
-};
+}

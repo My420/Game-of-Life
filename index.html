@@ -7,7 +7,7 @@
   <meta name="description" content="Игра «Жизнь» (англ. Conway's Game of Life) — клеточный автомат, придуманный английским математиком Джоном Конвеем в 1970 году.">
   <meta name="keywords" content="игра, игра «Жизнь», эмуляция Жизни, математика, клеточный автомат">
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
@@ -23,8 +23,10 @@
 
   <main class="page_main">
     <section class="page_main__game field">
+      <h2 class="visually-hidden">Поле игры</h2>
     </section>
     <section class="page_main__controls controls">
+      <h2 class="visually-hidden">Управление игрой</h2>
       <button class="controls__button" data-action="start">Start</button>
       <button class="controls__button" data-action="oneStep">One Step</button>
       <button class="controls__button" data-action="pause">Pause</button>
